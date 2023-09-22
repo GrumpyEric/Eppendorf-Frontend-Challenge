@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { TableJSON } from '../components/TableJSON';
+import data from '../../data.json';
+---
+
+<Layout title="Sorted table">
+	<main class="gap-5">
+		<h1 class="text-5xl text-center">Sorted table</h1>
+		<TableJSON data={data} columns={Object.keys(data[0])} client:load/>
+	</main>
+</Layout>
